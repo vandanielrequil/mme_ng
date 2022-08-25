@@ -1,0 +1,17 @@
+<div class="top-bar">
+    <a href="/"><img src="../../assets/images/mme_logo.png" alt="Munchkin Mass Effect Logo"></a>
+    <nav class="top-bar__nav">
+        <li class="top-bar__button" href="/">NEWS</li>
+        <li class="top-bar__button top-bar__button_list"
+            (mouseenter)="cardTypesListVisible=true" (mouseleave)="cardTypesListVisible=false">CARDS & STAFF
+            <!-- <div class="arrow-up"></div> -->
+            <img class="n7-arrow" src="../../assets/images/n7.png" alt="list arrow">
+            <div class="cards-type-list" *ngIf="cardTypesListVisible"></div>
+        </li>
+        <li class="top-bar__button" href="/">DOWNLOADS</li>
+        <li class="top-bar__button" href="/">ABOUT PROJECT</li>
+    </nav>
+    <button title="hide blood moon" class="top-bar__col col_blood" (click)="hideOrShowSpaceObject(moon)"></button>
+    <button title="hide blood sun" class="top-bar__col col_omni" (click)="hideOrShowSpaceObject(sun)"></button>
+    <button title="hide blood earth" class="top-bar__col col_dark" (click)="hideOrShowSpaceObject(earth)"></button>
+</div>

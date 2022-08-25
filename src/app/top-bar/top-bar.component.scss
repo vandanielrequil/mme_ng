@@ -1,0 +1,104 @@
+@import '../../styles/variables.scss';
+@import '../../styles/common.scss';
+
+$top-bar-height: 80px;
+
+.top-bar {
+    position: sticky;
+    top: 2.5%;
+    z-index: 11;
+    @extend .flex-center;
+    background: $color-main-blue;    
+    box-shadow: 0px 0px 10px $color-main-dark;
+    height: $top-bar-height;
+    &__nav{
+        @extend .flex-center;
+        margin: 0 30px;
+        height: 100%;
+    }
+    &__button {
+        @extend .flex-center;
+        position: relative;
+        text-decoration: none;
+        opacity: 0.8;
+        color: $color-main-light;
+        padding: 0 20px;
+        height: 100%;
+        transition: 0.2s ease-in-out;
+    }
+    
+    &__button:hover {
+        cursor: pointer;
+        opacity: 1;
+        border-bottom: $color-main-light solid 4px;
+        & .n7-arrow {
+            transition: 0.5s ease-in-out;
+            bottom: 47px;
+        }
+        // &::after { //@TODO running from mouse
+        //     content: "";
+        //     background: $color-sec-blood;
+        //     border-radius: 2px;
+        //     position: absolute;
+        //     top: 5px;
+        //     right: 0px;
+        //     width: 14px;
+        //     height: 12px;
+        //     transform: skewX(0deg);
+        //     transition: 0.2s ease-in-out;
+        // }
+
+        
+    }
+    &__col {
+        margin: 0 7px;
+        $col-height: 90px;
+        $col-width: 15px; ;
+        height: $col-height;
+        width: $col-width;
+        border-radius: 3px;
+        border-color: transparent;
+        transform: skew(-15deg, 0);
+        transition: 0.2s ease-in-out;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        &:hover {
+            cursor: pointer;
+            height: calc($col-height*1.1);
+            width: calc($col-width*1.2);
+        }
+    }
+
+    .col {
+        &_blood {
+            background: $color-sec-blood;
+        }
+        &_omni {
+            background: $color-sec-omni;
+        }
+        &_dark {
+            background: $color-main-dark;
+        }
+    }
+
+    .cards-type-list {
+        position: absolute;
+        top: $top-bar-height;
+        left: 0px;
+        border: 10px solid red;
+        width: 100px;
+        height: 100px;
+        background-color: blueviolet;
+    }
+
+    .n7-arrow {
+        position: absolute;
+        bottom: 42px;
+        right: 5px;
+        width: 19px;
+        transform: rotate(270deg);
+    }
+}
+
+
+
+

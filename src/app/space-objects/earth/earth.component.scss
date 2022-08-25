@@ -1,0 +1,33 @@
+@import '../../../styles/variables.scss';
+
+.space {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.cosmic-body {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    left: 6%;
+    z-index: 0;
+    width: 100%;
+    &.top {
+        height: 70vh;
+    }
+    &.bottom {
+        height: 100vh;
+    }
+}
+
+.earth {
+    position: relative;
+    bottom: 243%;
+    right: 55%;
+    z-index: 0;
+    width: 203vw;
+    height: 99vw;
+    background: $color-main-dark;
+    border-radius: 133%/123%;
+}
